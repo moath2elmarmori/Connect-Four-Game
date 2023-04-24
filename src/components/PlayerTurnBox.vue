@@ -1,12 +1,22 @@
 <template>
   <div class="box-container" ref="boxContainerRef">
-    <img
+    <!-- <img
       :src="
         thePlayer === 'player1'
-          ? '/src/assets/red-player-turn.svg'
-          : '/src/assets/yellow-player-turn.svg'
+          ? '../assets/red-player-turn.svg'
+          : '../assets/yellow-player-turn.svg'
       "
       alt="player turn"
+    /> -->
+    <img
+      src="../assets/red-player-turn.svg"
+      alt="player turn"
+      v-if="thePlayer === 'player1'"
+    />
+    <img
+      src="../assets/yellow-player-turn.svg"
+      alt="player turn"
+      v-if="thePlayer === 'player2'"
     />
     <div>
       <h4 v-if="!winningText">
