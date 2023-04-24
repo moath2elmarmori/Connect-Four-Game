@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --purple-color: #5c2dd5;
+  --less-purple-color: #7945ff;
+  --redish-color: #fd6687;
+  --yellowish-color: #ffce67;
+}
+html {
+  font-family: "Space Grotesk", sans-serif;
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+}
+body {
+  background-color: var(--purple-color);
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* utility classes */
+.make-it-border {
+  border: 5px solid black !important;
+  border-bottom: 10px solid black !important;
+  border-radius: 15px 15px 20px 20px;
+}
+.bg-yellow {
+  background-color: var(--yellowish-color);
+}
+.bg-red {
+  background-color: var(--redish-color);
+}
+.bg-white {
+  background-color: white;
+}
+/* classes for the column before pseude element */
+/* if the cell will go to 0 row then it will be top:3%, and every next cell will add 15% from the previous one */
+/* means, the second row will be top: (3% + 15% = 18%), and so on */
+.column[data-top="0"].active::before {
+  top: 3%;
+}
+.column[data-top="1"].active::before {
+  top: 18%;
+}
+.column[data-top="2"].active::before {
+  top: 33%;
+}
+.column[data-top="3"].active::before {
+  top: 48%;
+}
+.column[data-top="4"].active::before {
+  top: 63%;
+}
+.column[data-top="5"].active::before {
+  top: 78%;
+}
