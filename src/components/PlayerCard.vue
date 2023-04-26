@@ -4,13 +4,23 @@
     :class="thePlayer === 'player1' ? 'player1' : 'player2'"
   >
     <div class="img-div">
-      <img
+      <!-- <img
         :src="
           thePlayer === 'player1'
             ? '/src/assets/red-smily-face.svg'
             : '/src/assets/yellow-smily-face.svg'
         "
         alt=""
+      /> -->
+      <img
+        src="../assets/red-smily-face.svg"
+        alt="red player smily face"
+        v-if="thePlayer === 'player1'"
+      />
+      <img
+        src="../assets/yellow-smily-face.svg"
+        alt="yellow player smily face"
+        v-if="thePlayer === 'player2'"
       />
     </div>
     <div class="content">
