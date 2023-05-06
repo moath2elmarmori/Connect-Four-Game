@@ -1,14 +1,14 @@
 <template>
   <div class="box-container" ref="boxContainerRef">
-    <!-- <img
+    <img
       :src="
         thePlayer === 'player1'
-          ? '../assets/red-player-turn.svg'
-          : '../assets/yellow-player-turn.svg'
+          ? '/red-player-turn.svg'
+          : '/yellow-player-turn.svg'
       "
       alt="player turn"
-    /> -->
-    <img
+    />
+    <!-- <img
       src="../assets/red-player-turn.svg"
       alt="player turn"
       v-if="thePlayer === 'player1'"
@@ -17,7 +17,7 @@
       src="../assets/yellow-player-turn.svg"
       alt="player turn"
       v-if="thePlayer === 'player2'"
-    />
+    /> -->
     <div>
       <h4 v-if="!winningText">
         Player <span>{{ playerTurn }}</span
