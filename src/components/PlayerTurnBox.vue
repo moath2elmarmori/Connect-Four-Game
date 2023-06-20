@@ -154,10 +154,4 @@ export default {
     font-size: 0.8rem;
   }
 }
-/* @media (max-width: 767px) {
-  .box-container {
-    height: 130px;
-    font-size: 0.9rem;
-  }
-} */
 </style>
